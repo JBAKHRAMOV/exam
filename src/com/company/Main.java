@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        /*// exercise 1
+        // exercise 1
         int matrix[][] = {{0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},
@@ -12,19 +12,19 @@ public class Main {
                 {0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0},};
 
-        int[] location = getCurrentLocation(matrix);
+        int[] location = exercise_1(matrix);
         if (location == null) {
             System.out.println("Incurect Location");
             return;
         }
-        System.out.println("Steps " + countSteps(location[0], location[1], matrix));*/
+        System.out.println("Steps " + countSteps(location[0], location[1], matrix));
 
 
 
         // exercise 2
-//        exercise_2(5);
+        exercise_2(5);
 
-
+        // exercise 3
         exercise_3("kelajak");
 
     }
@@ -42,11 +42,9 @@ public class Main {
     }
 
     public static int countSteps(int locationI, int locationJ, int[][] matrix) {
-        // markazni xisoblaymiz.
         int centerI = matrix.length / 2;
         int centerJ = matrix.length / 2;
 
-        //markazdan hozirgi turgan joyni ayiramiz va moduleni olamiz.
         int a = Math.abs(centerI - locationI);
         int b = Math.abs(centerJ - locationJ);
         return a + b;
